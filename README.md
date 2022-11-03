@@ -1,5 +1,8 @@
 # Calculator REST API
 
+![Main workflow](https://github.com/andresrv94/calculator_rest_api/actions/workflows/build-and-push.yml/badge.svg)
+
+
 This is a project intended to practice app development with Python and Flask. Also it should be a reference.
 
 ## Quick start
