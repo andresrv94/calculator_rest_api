@@ -1,5 +1,5 @@
-from flask import Flask
-from flask import request
+from flask import Flask,request,render_template
+# from flask import request
 import calc_functions
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 #This should return a rendered HTML page explaining what can be done with the API
 @app.route("/")
 def info():
-    return "<p>Hello, World!</p>"
+    return render_template('info.html')
 
 @app.route("/sum", methods=["POST"])
 def f_sum():
