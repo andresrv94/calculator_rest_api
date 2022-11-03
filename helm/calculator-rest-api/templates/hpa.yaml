@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "calculator_rest_api.fullname" . }}
+  name: {{ include "calculator-rest-api.fullname" . }}
   labels:
-    {{- include "calculator_rest_api.labels" . | nindent 4 }}
+    {{- include "calculator-rest-api.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "calculator_rest_api.fullname" . }}
+    name: {{ include "calculator-rest-api.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
