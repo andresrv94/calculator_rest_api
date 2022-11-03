@@ -9,6 +9,9 @@ on:
     paths-ignore:
       - '**/README.md'
       - '**/docker-compose.yml'
+      - 'helm/'
+      - '.github/'
+
 
 permissions:
   contents: read
