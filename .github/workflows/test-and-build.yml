@@ -7,8 +7,8 @@ on:
   pull_request:
     branches: [ "main" ]
     paths-ignore:
-      - 'README.md'
-      - 'docker-compose.yml'
+      - '**/README.md'
+      - '**/docker-compose.yml'
 
 permissions:
   contents: read

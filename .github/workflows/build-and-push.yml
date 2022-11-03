@@ -5,8 +5,8 @@ on:
     branches:
       - 'main'
     paths-ignore:
-      - 'README.md'
-      - 'docker-compose.yml'
+      - '**/README.md'
+      - '**/docker-compose.yml'
 
 jobs:
   test-and-lint:
