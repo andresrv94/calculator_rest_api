@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask,request,render_template,make_response,redirect,url_for
 # from flask import request
 import calc_functions
 
@@ -7,7 +7,13 @@ app = Flask(__name__)
 #This should return a rendered HTML page explaining what can be done with the API
 @app.route("/")
 def info():
-    return render_template('info.html')
+    if request.cookies.get('throttle') == "true":
+        print("This user already downloaded this page. Redirecting him to Reddit :D")
+        return redirect('https://www.reddit.com')
+
+    resp = make_response(render_template('info.html'))
+    resp.set_cookie('throttle', 'true')
+    return resp
 
 @app.route("/sum", methods=["POST"])
 def f_sum():
