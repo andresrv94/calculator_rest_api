@@ -1,5 +1,4 @@
 from flask import Flask,request,render_template,make_response,redirect,url_for
-# from flask import request
 import calc_functions
 
 app = Flask(__name__)
