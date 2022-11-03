@@ -1,9 +1,10 @@
 import unittest
-import calc_functions
 import sys
 
 
 sys.path.append('app')
+
+import calc_functions
 
 
 class TestSum(unittest.TestCase):
